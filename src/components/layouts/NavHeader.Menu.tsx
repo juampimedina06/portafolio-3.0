@@ -23,50 +23,11 @@ export default function NavHeaderMenu({ ...props }: Props) {
         {menuItems.map((item, index) => {
           return (
             <NavigationMenuItem key={index}>
-              {item.children ? (
-                <>
-                  <NavigationMenuTrigger>Menu Title</NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                      {item.featured && (
-                        <li className="row-span-3">
-                          <NavigationMenuLink asChild>
-                            <a
-                              className="to-muted flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-600/50 p-6 no-underline outline-none focus:shadow-md"
-                              href="/"
-                            >
-                              <div className="mb-2 mt-4 text-lg font-medium">
-                                Title
-                              </div>
-                              <p className="text-muted-foreground text-sm leading-tight">
-                                Description
-                              </p>
-                            </a>
-                          </NavigationMenuLink>
-                        </li>
-                      )}
-
-                      {item.children.map((child, index) => {
-                        return (
-                          <ListItem
-                            key={index}
-                            href={child.href}
-                            title={"Title"}
-                          >
-                            Description
-                          </ListItem>
-                        );
-                      })}
-                    </ul>
-                  </NavigationMenuContent>
-                </>
-              ) : (
                 <Link href={item.href} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Title
+                    {item.i18nKey}
                   </NavigationMenuLink>
                 </Link>
-              )}
             </NavigationMenuItem>
           );
         })}

@@ -1,0 +1,28 @@
+/* AnimacionLenguage.module.css */
+.contenedor_lenguaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem 0 0;
+  width: auto;
+  height: 4rem;
+  position: relative;
+}
+
+.lenguaje {
+  color: rgba(255, 255, 255, 0.993);
+  text-shadow: 0 0 5px rgba(119, 121, 238, 0.993);
+  padding: 1px 4px;
+  font-size: 0.9rem;
+  position: absolute;
+  top: -10px;
+  opacity: 0; /* Oculto inicialmente */
+  transform: translateY(10px); /* Desplazado hacia abajo */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transiciones */
+}
+
+.contenedor_lenguaje:hover .lenguaje {
+  opacity: 1; /* Aparece */
+  transform: translateY(0); /* Posición normal */
+}

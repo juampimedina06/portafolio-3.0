@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
 import NavHeader from "@/components/layouts/NavHeader";
+import BotonDescargarCV from "@/components/propios/botonCV";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-background min-h-screen scroll-smooth`}
       >
         <Providers>
+          <BotonDescargarCV />
           <header className="h-[65px]">
             <NavHeader />
           </header>

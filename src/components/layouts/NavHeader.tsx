@@ -45,14 +45,6 @@ export default function NavHeader({
             <ButtonToggleTheme></ButtonToggleTheme>
           </div>
 
-          <div className="hidden gap-4 sm:flex">
-            <Button asChild variant={"outline"}>
-              <Link href={"/login"}>Login</Link>
-            </Button>
-            <Button asChild>
-              <Link href={"/signup"}>Get in touch!</Link>
-            </Button>
-          </div>
 
           <div className="sheet-container flex items-center lg:hidden ">
             <Sheet>
@@ -61,10 +53,9 @@ export default function NavHeader({
               </SheetTrigger>
               <SheetContent className="pt-20">
                 <SheetHeader>
-                  <Link className="text-lg" href={"/Inicio"}>Inicio</Link>
+                  <Link className="text-lg" href={"/"}>Inicio</Link>
                   <Link className="text-lg" href={"/Proyectos"}>Proyectos</Link>
                   <Link className="text-lg" href={"/Habilidades"}>Habilidades</Link>
-                  <Link className="text-lg" href={"/Precios"}>Precios</Link>
                   <Link className="text-lg" href={"/Contacto"}>Contacto</Link>
                 </SheetHeader>
               </SheetContent>
