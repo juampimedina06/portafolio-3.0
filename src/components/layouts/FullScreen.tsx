@@ -38,7 +38,7 @@ export function ThreeDMarqueeDemoSecond() {
     "https://assets.aceternity.com/world-map.webp",
   ];
   return (
-    <div className="relative mx-auto flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden">
+    <div className="relative mx-auto flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden ">
         <img 
         src="/assets/logos/traje-sin-fondo.png" 
         alt="Logo traje" 
@@ -74,9 +74,9 @@ Me dedico a crear y mejorar páginas web, buscando siempre brindar soluciones ef
       </div>
 
       {/* overlay */}
-      <div className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
+      {/* <div className="absolute inset-0 z-10 h-full w-full  dark:bg-black/40" /> */}
       <ThreeDMarquee
-        className="pointer-events-none absolute inset-0 h-full w-full"
+        className=" absolute inset-0 h-full w-full"
         images={images}
       />
     </div>
