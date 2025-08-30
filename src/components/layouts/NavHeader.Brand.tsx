@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import TituloShadow from "../ui/TituloShadow";
 
 type Props = {} & React.ComponentProps<typeof Link>;
 
@@ -15,7 +16,7 @@ export default function NavHeaderBrand({ href, ...props }: Props) {
         src="/assets/logos/traje.jpg"
         className="h-[40px] w-[40px] rounded-full object-cover"
       ></img>
-      <span className="ml-2 text-lg font-semibold">Juan Pablo Medina</span>
+      <TituloShadow textoNormal="Juan Pablo" textoEstilizado="Medina" />
     </Link>
   );
 }

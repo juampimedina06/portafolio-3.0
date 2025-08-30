@@ -11,6 +11,7 @@ import ReactLOGO from "@/components/lenguajes/React";
 import StyledComponent from "@/components/lenguajes/StyledComponent";
 import TypescriptLogo from "@/components/lenguajes/Typescript";
 import AnimacionLenguage from "@/components/propios/AnimacionLenguage";
+import Talwind from "../lenguajes/Talwind";
 const Proyectos = () => {
   return (
     <div className="flex flex-col justify-center">
@@ -26,14 +27,14 @@ const Proyectos = () => {
                   titulo="Portafolio Personal"
                   descripcion="Portafolio con la libreria aceternity para poder mostrar habiliades y certficaciones"
                   imagen="/assets/paginas/pagina-portafolio.jpg"
-                  repo="https://github.com/juampimedina06/catalogo-de-autos"
+                  repo="https://github.com/juampimedina06/portafolio-3.0"
                   demo=""
                 >
                   <AnimacionLenguage lenguaje="Html">
                     <HtmlLogo className="w-5" />
                   </AnimacionLenguage>
-                  <AnimacionLenguage lenguaje="Css">
-                    <CssLogo className="w-5" />
+                  <AnimacionLenguage lenguaje="Talwind">
+                    <Talwind className="w-5" />
                   </AnimacionLenguage>
                   <AnimacionLenguage lenguaje="TypeScript">
                     <TypescriptLogo className="w-5" />
@@ -41,13 +42,10 @@ const Proyectos = () => {
                   <AnimacionLenguage lenguaje="React">
                     <ReactLOGO className="w-6" />
                   </AnimacionLenguage>
-                  <AnimacionLenguage lenguaje="Firebase">
-                    <FirebaseLogo className="w-5" />
-                  </AnimacionLenguage>
                 </ThreeDCardDemo>
                 <ThreeDCardDemo
                   key={1}
-                  titulo="Catalogo de autos Autoadministrable"
+                  titulo="Catalogo de autos"
                   descripcion="Pagina para un cliente que tiene una consesionaria para que los clientes puedan ver sus autos y redirigirlos a WhatsApp, ademas que sus empleados puedan administrar los autos"
                   imagen="/assets/paginas/pagina-autos.jpg"
                   repo="https://github.com/juampimedina06/catalogo-de-autos"
@@ -70,9 +68,13 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
 
+                
+              </div>
+
+              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
                   key={2}
-                  titulo="Encuesta con dashboard para Municipalidad"
+                  titulo="Encuesta para Municipalidad"
                   descripcion="Proyecto con el objetivo de implementes el metodo SCRUM con mis compañeros de la facultad, yo me encargue de hacer le estructura y la logica de angular y los partes funcionales(Dashboard, Login, Formulario), otro compañero el backend y otros estilizar el nav, inicio y footer"
                   imagen="/assets/paginas/pagina.muni.jpg"
                   repo="https://github.com/juampimedina06/municipalidad"
@@ -95,9 +97,6 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                   
                 </ThreeDCardDemo>
-              </div>
-
-              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
                   key={3}
                   titulo="Clon de Netflix"
@@ -126,7 +125,11 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
                 
-                <ThreeDCardDemo
+                          
+              </div>
+            
+              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+              <ThreeDCardDemo
                   key={4}
                   titulo="Clon de Mercado libre"
                   descripcion="Mercado Week es una página web inspirada en Mercado Libre, creada como parte del desafío Alura Week. Utiliza HTML, CSS y JavaScript, con una API fake para gestionar productos"
@@ -143,10 +146,7 @@ const Proyectos = () => {
                   <AnimacionLenguage lenguaje="JavaScript">
                     <Javascript className="w-5" />
                   </AnimacionLenguage>
-                </ThreeDCardDemo>                
-              </div>
-            
-            <div className="flex gap-4 mt-4">
+                </ThreeDCardDemo>      
                 <ThreeDCardDemo
                   key={4}
                   titulo="Pagina shark"
@@ -162,7 +162,7 @@ const Proyectos = () => {
                     <CssLogo className="w-5" />
                   </AnimacionLenguage>
                   <AnimacionLenguage lenguaje="Bootstrap">
-                    <Bostrap className="w-5" />
+                    <Bostrap className="w-7" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
             </div>
