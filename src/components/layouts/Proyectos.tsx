@@ -50,7 +50,7 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
                 <ThreeDCardDemo
-                  key={1}
+                  key={2}
                   titulo="Catalogo de autos"
                   descripcion="Pagina para un cliente que tiene una consesionaria para que los clientes puedan ver sus autos y redirigirlos a WhatsApp, ademas que sus empleados puedan administrar los autos"
                   imagen="/assets/paginas/pagina-autos.jpg"
@@ -80,7 +80,7 @@ const Proyectos = () => {
               <BoxReveal boxColor="1122330">
                 <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
-                  key={2}
+                  key={3}
                   titulo="Encuesta para Municipalidad"
                   descripcion="Proyecto con el objetivo de implementes el metodo SCRUM con mis compañeros de la facultad, yo me encargue de hacer le estructura y la logica de angular y los partes funcionales(Dashboard, Login, Formulario), otro compañero el backend y otros estilizar el nav, inicio y footer"
                   imagen="/assets/paginas/pagina.muni.jpg"
@@ -105,7 +105,7 @@ const Proyectos = () => {
                   
                 </ThreeDCardDemo>
                 <ThreeDCardDemo
-                  key={3}
+                  key={4}
                   titulo="Clon de Netflix"
                   descripcion="proyecto final del curso de alura, donde se implemento una pagina web para ver peliculas, con un buscador y un reproductor de video."
                   imagen="/assets/paginas/proyecto-aluraflix.png"
@@ -139,7 +139,7 @@ const Proyectos = () => {
               <BoxReveal boxColor="1122330">
                 <div className="flex flex-col gap-4 mt-4 sm:flex-row">
               <ThreeDCardDemo
-                  key={4}
+                  key={5}
                   titulo="Clon de Mercado libre"
                   descripcion="Mercado Week es una página web inspirada en Mercado Libre, creada como parte del desafío Alura Week. Utiliza HTML, CSS y JavaScript, con una API fake para gestionar productos"
                   imagen="/assets/paginas/mercado-week.png"
@@ -157,7 +157,7 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>      
                 <ThreeDCardDemo
-                  key={4}
+                  key={6}
                   titulo="Pagina shark"
                   descripcion="Pagina de venta de ropa replicando el diseño"
                   imagen="/assets/paginas/pagina-shark.jpg"
@@ -175,7 +175,7 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
             </div>
-               </BoxReveal>
+              </BoxReveal>
               
 
             </div>
