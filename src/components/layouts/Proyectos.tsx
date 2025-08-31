@@ -14,10 +14,10 @@ import AnimacionLenguage from "@/components/propios/AnimacionLenguage";
 import Talwind from "../lenguajes/Talwind";
 const Proyectos = () => {
   return (
-    <div className="flex flex-col justify-center">
-            <div className="flex flex-col justify-center items-center mt-20">
-              <h2 className="relative z-20 mx-auto max-w-4xl text-center text-xl font-bold text-balance text-white md:text-2xl lg:text-4xl"><span className="relative z-20 inline-block rounded-xl bg-blue-500/40 px-4 text-white backdrop-blur-sm">Proyectos</span>{" "}
-                Destacados{" "}</h2>
+    <div className="flex flex-col justify-center m-10">
+            <div className="flex flex-col justify-center items-center">
+              <h2 className="sm:text-[3rem] text-[2.5rem]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">Proyectos
+                Destacados</h2>
               <p className="relative z-20 mx-auto max-w-2xl py-4 text-center text-sm text-neutral-500 md:text-base">Aquí se muestran algunos de mis trabajos recientes que muestran mis habilidades.</p>
             </div>
             <div className="flex flex-col items-center justify-center">

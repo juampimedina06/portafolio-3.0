@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { AnimatedThemeToggler } from "../magicui/animated-theme-toggler";
+import { BoxReveal } from "../magicui/box-reveal";
 
 type Props = {
   positionMenu?: "left" | "right" | "center";
@@ -28,7 +29,7 @@ export default function NavHeader({
   return (
     <nav
       className={cn(
-        `bg-background/95 fixed z-[100] flex h-[65px] w-full items-center  justify-center border-b backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-gray-500 dark:supports-[backdrop-filter]:bg-black/60`,
+        `bg-background/95 fixed z-[100] flex h-[65px] w-full items-center  justify-center border-b backdrop-blur bg-transparent`,
         className
       )}
       {...props}
@@ -40,7 +41,9 @@ export default function NavHeader({
 
         <div className="flex items-center gap-4">
           <div className="preferences  hidden items-center gap-4 md:flex">
+          <BoxReveal boxColor="transparent">
           <AnimatedThemeToggler />
+          </BoxReveal>
           </div>
 
 

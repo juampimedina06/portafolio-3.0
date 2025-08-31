@@ -20,15 +20,22 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} antialiased bg-background min-h-screen scroll-smooth`}
+        className={`${inter.className} antialiased bg-background min-h-screen scroll-smooth relative`}
       >
         <Providers>
+          {/* Fondo fijo */}
+
           <BotonDescargarCV />
-          <header className="h-[65px]">
+
+          <header className="h-[65px] relative z-100">
             <NavHeader />
           </header>
-          <main>{children}</main>
-          <footer>
+
+          <main className="relative z-10">
+            {children}
+          </main>
+
+          <footer className="relative z-10">
             <h1>Footer</h1>
           </footer>
         </Providers>
