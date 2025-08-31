@@ -22,6 +22,7 @@ import FigmaLogo from '../lenguajes/Figma';
 import JavaLogo from '../lenguajes/Java';
 import Material from '../lenguajes/Material';
 import BotonTecnologias from '../magicui/BotonTecnologias';
+import { BoxReveal } from '../magicui/box-reveal';
 
 const certificacionesData = [
   {
@@ -54,13 +55,15 @@ const Certficaciones = () => {
   const { theme } = useTheme();
 
   return (
-    <div className='flex w-full flex-col items-center mb-20 mt-20'>
-      {/* Título */}
-      <h2 className="sm:text-[3rem] text-[2.5rem]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-                Mis Certificaciones</h2>
+    <div className='flex w-full flex-col items-center mb-36 mt-20 '>
+      <BoxReveal boxColor="1122330">
+          <h2 className="sm:text-[3rem] text-[2.5rem]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">Mis Certificaciones</h2>                
+      </BoxReveal>
+      
 
       <div className="flex w-full max-w-4xl flex-col items-center gap-2">
         {certificacionesData.map((cert) => (
+          <BoxReveal boxColor='1122330' key={cert.title}>
   <MagicCard
     key={cert.title} // usar algo único
     gradientColor={theme === "dark" ? "rgb(95, 196, 255)" : "#29b1ff" }
@@ -113,6 +116,8 @@ const Certficaciones = () => {
       </div>
     </div>
   </MagicCard>
+      </BoxReveal>
+
 ))}
 
       </div>

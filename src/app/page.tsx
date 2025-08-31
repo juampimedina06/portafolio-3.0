@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center w-[100%]">
         <ThreeDMarqueeDemoSecond />
-        <ContainerFluid className="w-[90%] sm:w-[70%] gap-20 flex flex-col">
+        <ContainerFluid className="w-[90%] sm:w-[70%] gap-16 flex flex-col">
           <Proyectos />
           <MisTecnologias />
           <Certficaciones />

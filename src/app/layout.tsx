@@ -4,6 +4,8 @@ import "./globals.css";
 import Providers from "./providers";
 import NavHeader from "@/components/layouts/NavHeader";
 import BotonDescargarCV from "@/components/propios/botonCV";
+import Footer from "@/components/layouts/Footer";
+import { BoxReveal } from "@/components/magicui/box-reveal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,21 +25,40 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-background min-h-screen scroll-smooth relative`}
       >
         <Providers>
-          {/* Fondo fijo */}
 
+
+
+          <BoxReveal boxColor="1122330">
           <BotonDescargarCV />
+          </BoxReveal>
 
           <header className="h-[65px] relative z-100">
             <NavHeader />
           </header>
 
+<div className="fixed inset-0 -z-10 bg-black dark:bg-white">
+  {/* Líneas de cuadrícula */}
+  <div className="absolute inset-0 
+      bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),
+      linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
+      bg-[size:14px_24px]">
+  </div>
+
+  {/* Radial gradient */}
+  <div className="absolute left-10 right-0 top-[-40%] h-[1000px] w-[1000px] rounded-full 
+      bg-[radial-gradient(circle_400px_at_50%_300px,#049bffd5,#000000)]
+      dark:bg-[radial-gradient(circle_400px_at_50%_300px,#049bffd5,#fafafa)]
+      ">
+  </div>
+</div>
+
+
+
           <main className="relative z-10">
             {children}
           </main>
 
-          <footer className="relative z-10">
-            <h1>Footer</h1>
-          </footer>
+          <Footer />
         </Providers>
       </body>
     </html>

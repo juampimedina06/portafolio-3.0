@@ -5,7 +5,7 @@ const BotonDescargarCV = () => {
         <a
         href="/cv-juanpablomedina.pdf" 
         target="_blank"
-        className="fixed bottom-4 right-4 z-[2000] "
+        className="fixed sm:top-4 bottom-4 right-4 z-[2000] "
         >
         <RainbowButton className="text-white dark:text-black">
             Descargar cv

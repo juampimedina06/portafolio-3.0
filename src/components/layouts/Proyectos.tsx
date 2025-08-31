@@ -12,16 +12,22 @@ import StyledComponent from "@/components/lenguajes/StyledComponent";
 import TypescriptLogo from "@/components/lenguajes/Typescript";
 import AnimacionLenguage from "@/components/propios/AnimacionLenguage";
 import Talwind from "../lenguajes/Talwind";
+import { BoxReveal } from "../magicui/box-reveal";
 const Proyectos = () => {
   return (
     <div className="flex flex-col justify-center m-10">
             <div className="flex flex-col justify-center items-center">
+              <BoxReveal boxColor="#1122330">
               <h2 className="sm:text-[3rem] text-[2.5rem]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">Proyectos
                 Destacados</h2>
-              <p className="relative z-20 mx-auto max-w-2xl py-4 text-center text-sm text-neutral-500 md:text-base">Aquí se muestran algunos de mis trabajos recientes que muestran mis habilidades.</p>
+              </BoxReveal>
+              <BoxReveal boxColor="1122330">
+                <p className="relative z-20 mx-auto max-w-2xl py-4 text-center text-sm text-neutral-500 md:text-base">Aquí se muestran algunos de mis trabajos recientes que muestran mis habilidades.</p>
+              </BoxReveal>
             </div>
             <div className="flex flex-col items-center justify-center">
-              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+              <BoxReveal boxColor="1122330">
+                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
                   key={1}
                   titulo="Portafolio Personal"
@@ -67,11 +73,12 @@ const Proyectos = () => {
                     <FirebaseLogo className="w-5" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
-
-                
               </div>
+              </BoxReveal>
+              
 
-              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+              <BoxReveal boxColor="1122330">
+                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
                   key={2}
                   titulo="Encuesta para Municipalidad"
@@ -127,8 +134,10 @@ const Proyectos = () => {
                 
                           
               </div>
-            
-              <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+              </BoxReveal>
+              
+              <BoxReveal boxColor="1122330">
+                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
               <ThreeDCardDemo
                   key={4}
                   titulo="Clon de Mercado libre"
@@ -166,6 +175,8 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
             </div>
+               </BoxReveal>
+              
 
             </div>
           </div>

@@ -27,8 +27,7 @@ import MagicUI from "../lenguajes/MagicUI";
 
 const logos = [
   HtmlLogo, CssLogo, Javascript, TypescriptLogo, ReactLOGO, AngularLogo, Talwind,
-  StyledComponent, Material, Bostrap, Csharp, JavaLogo, FigmaLogo, GitLogo,
-  DokerLogo, FirebaseLogo, MySQL, SqlServer, Charts, MagicUI, Scss, NodeLogo
+  StyledComponent, Material, Bostrap, Csharp, JavaLogo, FigmaLogo, GitLogo, FirebaseLogo, MySQL, SqlServer, Charts, MagicUI, Scss
 ];
 
 const MisTecnologias = () => {
