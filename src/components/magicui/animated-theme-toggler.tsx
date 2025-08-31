@@ -5,6 +5,13 @@ import { useState, useRef } from "react";
 import { flushSync } from "react-dom";
 import { cn } from "@/lib/utils";
 
+// Esto extiende Document para que TS reconozca startViewTransition
+declare global {
+  interface Document {
+    startViewTransition?: (callback: () => void) => { ready: Promise<void> };
+  }
+}
+
 type props = {
   className?: string;
 };
@@ -12,18 +19,26 @@ type props = {
 export const AnimatedThemeToggler = ({ className }: props) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+
   const changeTheme = async () => {
     if (!buttonRef.current) return;
 
-    await document.startViewTransition(() => {
+    if ("startViewTransition" in document && document.startViewTransition) {
+      await document.startViewTransition(() => {
+        flushSync(() => {
+          const dark = document.documentElement.classList.toggle("dark");
+          setIsDarkMode(dark);
+        });
+      }).ready;
+    } else {
+      // Fallback si el navegador no soporta startViewTransition
       flushSync(() => {
         const dark = document.documentElement.classList.toggle("dark");
         setIsDarkMode(dark);
       });
-    }).ready;
+    }
 
-    const { top, left, width, height } =
-      buttonRef.current.getBoundingClientRect();
+    const { top, left, width, height } = buttonRef.current.getBoundingClientRect();
     const y = top + height / 2;
     const x = left + width / 2;
 
@@ -45,6 +60,7 @@ export const AnimatedThemeToggler = ({ className }: props) => {
       },
     );
   };
+
   return (
     <button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
       {isDarkMode ? <SunDim /> : <Moon />}
