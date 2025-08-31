@@ -10,7 +10,7 @@ export interface PropsCards{
   titulo: string;
   descripcion:string;
   imagen:string;
-  repo?:string;
+  repo:string;
   demo:string;
   children: ReactNode;
 }
