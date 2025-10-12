@@ -27,7 +27,7 @@ const Proyectos = () => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <BoxReveal boxColor="1122330">
-                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+                <div className="flex flex-col sm:flex-row">
                 <ThreeDCardDemo
                   key={1}
                   titulo="Portafolio Personal"

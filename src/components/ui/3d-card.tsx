@@ -30,8 +30,8 @@ export const CardContainer = ({
     if (!containerRef.current) return;
     const { left, top, width, height } =
       containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - left - width / 2) / 5;
-    const y = (e.clientY - top - height / 2) / 5;
+    const x = (e.clientX - left - width / 2) / 10;
+    const y = (e.clientY - top - height / 2) / 10;
     containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
   };
 
@@ -62,7 +62,7 @@ export const CardContainer = ({
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
           className={cn(
-            " flex items-center justify-center relative transition-all duration-200 ease-linear",
+            " flex items-center justify-center relative transition-all duration-200 ease-linear p-3",
             className
           )}
           style={{

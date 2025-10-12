@@ -9,7 +9,6 @@ export function Contacto() {
     <div className="h-[24rem] w-full rounded-md relative flex flex-col items-center justify-center antialiased overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-1/5 dark:bg-gradient-to-b from-white to-transparent z-20" />
 
-      <Vortex>
         <div className="max-w-2xl mx-auto p-4 flex flex-col items-center relative z-30">
           <BoxReveal boxColor="1122330">
           <h1 className="sm:text-[7rem] text-[4rem] bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">Contactame</h1>
@@ -20,7 +19,6 @@ export function Contacto() {
           </p>
           </BoxReveal>
         </div>
-      </Vortex>
 
       
       <BoxReveal boxColor="1122330">

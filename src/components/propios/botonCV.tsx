@@ -3,7 +3,7 @@ import { RainbowButton } from "../magicui/rainbow-button";
 const BotonDescargarCV = () => {
     return (
         <a
-        href="/cv-juanpablomedina.pdf" 
+        href="/CV_JuanPabloMedina.pdf" 
         target="_blank"
         className="fixed sm:top-4 bottom-4 right-4 z-[2000] "
         >
