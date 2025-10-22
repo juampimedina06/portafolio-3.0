@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import BotonHover from "../ui/BotonHover";
-import { Vortex } from "../ui/Bortex";
 import { BoxReveal } from "../magicui/box-reveal";
 
 export function Contacto() {
@@ -19,7 +18,6 @@ export function Contacto() {
           </p>
           </BoxReveal>
         </div>
-
       
       <BoxReveal boxColor="1122330">
         <BotonHover

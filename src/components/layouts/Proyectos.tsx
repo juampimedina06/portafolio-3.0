@@ -51,11 +51,11 @@ const Proyectos = () => {
                 </ThreeDCardDemo>
                 <ThreeDCardDemo
                   key={2}
-                  titulo="Catalogo de autos"
-                  descripcion="Pagina para un cliente que tiene una consesionaria para que los clientes puedan ver sus autos y redirigirlos a WhatsApp, ademas que sus empleados puedan administrar los autos"
-                  imagen="/assets/paginas/pagina-autos.jpg"
-                  repo="https://github.com/juampimedina06/catalogo-de-autos"
-                  demo=""
+                  titulo="Catalogo de productos"
+                  descripcion="Pagina para un cliente que tiene un negocio mayorias y minorista para que los clientes puedan ver sus productos y redirigirlos a WhatsApp"
+                  imagen="/assets/paginas/pagina-hong.jpg"
+                  repo="https://github.com/juampimedina06/peque-o_hongkong"
+                  demo="https://peque-hongkong.vercel.app/"
                 >
                   <AnimacionLenguage lenguaje="Html">
                     <HtmlLogo className="w-5" />
@@ -75,7 +75,6 @@ const Proyectos = () => {
                 </ThreeDCardDemo>
               </div>
               </BoxReveal>
-              
 
               <BoxReveal boxColor="1122330">
                 <div className="flex flex-col gap-4 mt-4 sm:flex-row">
