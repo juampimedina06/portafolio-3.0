@@ -13,6 +13,9 @@ import TypescriptLogo from "@/components/lenguajes/Typescript";
 import AnimacionLenguage from "@/components/propios/AnimacionLenguage";
 import Talwind from "../lenguajes/Talwind";
 import { BoxReveal } from "../magicui/box-reveal";
+import NodeLogo from "../lenguajes/NodeJS";
+import MySQL from "../lenguajes/MySQL";
+import Expressjs from "../lenguajes/ExpressLogo";
 const Proyectos = () => {
   return (
     <div className="flex flex-col justify-center m-10">
@@ -27,7 +30,41 @@ const Proyectos = () => {
             </div>
             <div className="flex flex-col items-center justify-center">
               <BoxReveal boxColor="1122330">
+                
                 <div className="flex flex-col sm:flex-row">
+                  <ThreeDCardDemo
+                  key={7}
+                  titulo="Jugades Fifa"
+                  descripcion="Proyecto full-stack con requerimientos de la empresa xacademy"
+                  imagen="/assets/paginas/proyecto-jugadores.jpg"
+                  repo="https://github.com/juampimedina06/gestionar-istado-de-jugadores-fifa"
+                  demo="https://www.linkedin.com/feed/update/urn:li:activity:7387553206442283008/"
+                >
+                  <AnimacionLenguage lenguaje="Html">
+                    <HtmlLogo className="w-5" />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="Css">
+                    <CssLogo className="w-5" />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="ChartsJS">
+                    <Charts className="w-5" />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="TypeScript">
+                    <TypescriptLogo className="w-5" />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="Angular">
+                    <AngularLogo className="w-6" />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="NodeJS">
+                    <NodeLogo className="w-6"  />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="Express">
+                    <Expressjs className="w-6"  />
+                  </AnimacionLenguage>
+                  <AnimacionLenguage lenguaje="MySQL">
+                    <MySQL className="w-6"  />
+                  </AnimacionLenguage>
+                </ThreeDCardDemo>
                 <ThreeDCardDemo
                   key={1}
                   titulo="Portafolio Personal"
@@ -49,7 +86,13 @@ const Proyectos = () => {
                     <ReactLOGO className="w-6" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
-                <ThreeDCardDemo
+                
+              </div>
+              </BoxReveal>
+
+              <BoxReveal boxColor="1122330">
+                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+                  <ThreeDCardDemo
                   key={2}
                   titulo="Catalogo de productos"
                   descripcion="Pagina para un cliente que tiene un negocio mayorias y minorista para que los clientes puedan ver sus productos y redirigirlos a WhatsApp"
@@ -73,11 +116,6 @@ const Proyectos = () => {
                     <FirebaseLogo className="w-5" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
-              </div>
-              </BoxReveal>
-
-              <BoxReveal boxColor="1122330">
-                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
                 <ThreeDCardDemo
                   key={3}
                   titulo="Encuesta para Municipalidad"
@@ -103,7 +141,15 @@ const Proyectos = () => {
                   </AnimacionLenguage>
                   
                 </ThreeDCardDemo>
-                <ThreeDCardDemo
+                
+                
+                          
+              </div>
+              </BoxReveal>
+              
+              <BoxReveal boxColor="1122330">
+                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
+                  <ThreeDCardDemo
                   key={4}
                   titulo="Clon de Netflix"
                   descripcion="proyecto final del curso de alura, donde se implemento una pagina web para ver peliculas, con un buscador y un reproductor de video."
@@ -130,13 +176,6 @@ const Proyectos = () => {
                     <Material className="w-6" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>
-                
-                          
-              </div>
-              </BoxReveal>
-              
-              <BoxReveal boxColor="1122330">
-                <div className="flex flex-col gap-4 mt-4 sm:flex-row">
               <ThreeDCardDemo
                   key={5}
                   titulo="Clon de Mercado libre"
@@ -155,24 +194,6 @@ const Proyectos = () => {
                     <Javascript className="w-5" />
                   </AnimacionLenguage>
                 </ThreeDCardDemo>      
-                <ThreeDCardDemo
-                  key={6}
-                  titulo="Pagina shark"
-                  descripcion="Pagina de venta de ropa replicando el diseño"
-                  imagen="/assets/paginas/pagina-shark.jpg"
-                  repo="https://github.com/juampimedina06/pagina-shark"
-                  demo="https://pagina-shark.netlify.app/"
-                >
-                  <AnimacionLenguage lenguaje="Html">
-                    <HtmlLogo className="w-5" />
-                  </AnimacionLenguage>
-                  <AnimacionLenguage lenguaje="Css">
-                    <CssLogo className="w-5" />
-                  </AnimacionLenguage>
-                  <AnimacionLenguage lenguaje="Bootstrap">
-                    <Bostrap className="w-7" />
-                  </AnimacionLenguage>
-                </ThreeDCardDemo>
             </div>
               </BoxReveal>
               
