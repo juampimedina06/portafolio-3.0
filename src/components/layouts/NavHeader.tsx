@@ -1,19 +1,7 @@
 import { cn } from "@/lib/utils";
 import React from "react";
-import NavHeaderMenu from "./NavHeader.Menu";
 import NavHeaderBrand from "./NavHeader.Brand";
 import ContainerFluid from "../ui/ContainerFluid";
-import Link from "next/link";
-
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import { AnimatedThemeToggler } from "../magicui/animated-theme-toggler";
 import { BoxReveal } from "../magicui/box-reveal";
 
@@ -29,12 +17,12 @@ export default function NavHeader({
   return (
     <nav
       className={cn(
-        `bg-background/95 fixed z-[100] flex h-[65px] w-full items-center  justify-center border-b backdrop-blur bg-transparent`,
+        ` fixed z-[100] flex h-[65px] w-full  justify-center border-b backdrop-blur bg-transparent`,
         className
       )}
       {...props}
     >
-      <ContainerFluid className="flex justify-between w-[70%] ">
+      <ContainerFluid className="flex justify-between w-[100%] ">
         <div className="flex gap-4">
           <NavHeaderBrand href={"/"}></NavHeaderBrand>
         </div>

@@ -3,8 +3,8 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className=" w-[100%] flex justify-center border-t ">
-      <div className="w-[100%] sm:w-[80%] px-4 py-6 dark:bg-gray-100 bg-black md:flex md:items-center md:justify-between">
+    <footer className="w-full flex justify-center border-t dark:bg-gray-100 bg-black">
+      <div className="w-[80%] px-4 py-6  md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
           Desarrollado por{" "}
           <a href="https://www.linkedin.com/in/juan-pablo-medina-199b3b2b4/" className="hover:underline">

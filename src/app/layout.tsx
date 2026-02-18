@@ -25,34 +25,65 @@ export default function RootLayout({
         className={`${inter.className} antialiased bg-background min-h-screen scroll-smooth relative`}
       >
         <Providers>
-
-
-
+          <header className="h-[65px] relative z-100">
           <BoxReveal boxColor="1122330">
           <BotonDescargarCV />
           </BoxReveal>
-
-          <header className="h-[65px] relative z-100">
             <NavHeader />
           </header>
 
-<div className="fixed inset-0 -z-10 bg-black dark:bg-white">
-  {/* Líneas de cuadrícula */}
+         <div className="fixed inset-0 -z-10 bg-black dark:bg-white overflow-hidden">
+  
+  {/* Cuadrícula base */}
   <div className="absolute inset-0 
-      bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),
-      linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
-      bg-[size:14px_24px]">
+    bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),
+    linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]
+    bg-[size:14px_24px]">
   </div>
 
-  {/* Radial gradient */}
-  <div className="absolute left-10 right-0 top-[-40%] h-[1000px] w-[1000px] rounded-full 
-      bg-[radial-gradient(circle_400px_at_50%_300px,#049bffd5,#000000)]
-      dark:bg-[radial-gradient(circle_400px_at_50%_300px,#049bffd5,#fafafa)]
-      ">
+  {/* Esquina superior izquierda */}
+  <div className="absolute -left-[10%] -top-[20%] h-[700px] w-[700px] rounded-full 
+    bg-[radial-gradient(circle_300px_at_50%_50%,#049bff80,transparent_70%)]">
   </div>
+
+  {/* Esquina superior derecha */}
+  <div className="absolute -right-[5%] -top-[10%] h-[500px] w-[500px] rounded-full 
+    bg-[radial-gradient(circle_200px_at_50%_50%,#049bff40,transparent_70%)]">
+  </div>
+
+  {/* Centro izquierda */}
+  <div className="absolute left-[5%] top-[35%] h-[600px] w-[600px] rounded-full 
+    bg-[radial-gradient(circle_180px_at_50%_50%,#049bff30,transparent_70%)]">
+  </div>
+
+  {/* Centro derecha */}
+  <div className="absolute right-[10%] top-[40%] h-[500px] w-[500px] rounded-full 
+    bg-[radial-gradient(circle_160px_at_50%_50%,#049bff38,transparent_70%)]">
+  </div>
+
+  {/* Esquina inferior izquierda */}
+  <div className="absolute -left-[5%] -bottom-[15%] h-[600px] w-[600px] rounded-full 
+    bg-[radial-gradient(circle_250px_at_50%_50%,#049bff60,transparent_70%)]">
+  </div>
+
+  {/* Esquina inferior derecha */}
+  <div className="absolute -right-[8%] -bottom-[20%] h-[700px] w-[700px] rounded-full 
+    bg-[radial-gradient(circle_300px_at_50%_50%,#049bff70,transparent_70%)]">
+  </div>
+
+  {/* Centro absoluto — glow grande y visible */}
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+    h-[900px] w-[900px] rounded-full
+    bg-[radial-gradient(circle_400px_at_50%_50%,#049bff35,transparent_70%)]">
+  </div>
+
+  {/* Centro — núcleo interior más intenso */}
+  <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+    h-[500px] w-[500px] rounded-full
+    bg-[radial-gradient(circle_200px_at_50%_50%,#049bff28,transparent_70%)]">
+  </div>
+
 </div>
-
-
 
           <main className="relative z-10">
             {children}

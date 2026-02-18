@@ -1,55 +1,19 @@
 "use client";
 
 import { BoxReveal } from "../magicui/box-reveal";
-import { ThreeDMarquee } from "../ui/3d-marque";
 import BotonHover from "../ui/BotonHover";
+import Waves from "@/components/reactbits/Waves/Waves"
 
 
 export function ThreeDMarqueeDemoSecond() {
-  const images = [
-    "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
-    "https://assets.aceternity.com/animated-modal.png",
-    "https://assets.aceternity.com/animated-testimonials.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Tooltip_luwy44.png",
-    "https://assets.aceternity.com/github-globe.png",
-    "https://assets.aceternity.com/glare-card.png",
-    "https://assets.aceternity.com/layout-grid.png",
-    "https://assets.aceternity.com/flip-text.png",
-    "https://assets.aceternity.com/hero-highlight.png",
-    "https://assets.aceternity.com/carousel.webp",
-    "https://assets.aceternity.com/placeholders-and-vanish-input.png",
-    "https://assets.aceternity.com/shooting-stars-and-stars-background.png",
-    "https://assets.aceternity.com/signup-form.png",
-    "https://assets.aceternity.com/cloudinary_bkp/stars_sxle3d.png",
-    "https://assets.aceternity.com/spotlight-new.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Spotlight_ar5jpr.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.png",
-    "https://assets.aceternity.com/tabs.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Tracing_Beam_npujte.png",
-    "https://assets.aceternity.com/cloudinary_bkp/typewriter-effect.png",
-    "https://assets.aceternity.com/glowing-effect.webp",
-    "https://assets.aceternity.com/hover-border-gradient.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Infinite_Moving_Cards_evhzur.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Lamp_hlq3ln.png",
-    "https://assets.aceternity.com/macbook-scroll.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.png",
-    "https://assets.aceternity.com/multi-step-loader.png",
-    "https://assets.aceternity.com/vortex.png",
-    "https://assets.aceternity.com/wobble-card.png",
-    "https://assets.aceternity.com/world-map.webp",
-  ];
+ 
   return (
-     <div
-  className="relative mx-auto flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden
-             [mask-image:linear-gradient(black_90%,transparent_100%)]
-             [mask-repeat:no-repeat]
-             [mask-size:100%_100%]"
->
+     <div className=" relative flex h-screen w-full flex-col items-center justify-center overflow-hidden border-b-2" >
+      <Waves />
       <img
         src="/assets/logos/fotobaris.png"
         alt="Logo traje"
-        className="absolute top-60 left-1/2 z-10 w-1/2 -translate-x-1/2 -translate-y-1/2 
+        className="absolute top-80 left-1/2 z-10 w-1/2 -translate-x-1/2 -translate-y-1/2 
               [mask-image:linear-gradient(to_bottom,black_80%,transparent)] [mask-repeat:no-repeat] [mask-size:100%]"
       />
 
@@ -63,7 +27,7 @@ export function ThreeDMarqueeDemoSecond() {
       </BoxReveal>
 
       <BoxReveal boxColor="#1122330"> 
-        <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base">
+        <p className=" relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base">
           👋 ¡Hola! Soy Juan Pablo Medina, vivo en Córdoba, Argentina 🇦🇷 y
           actualmente estoy estudiando Desarrollo de Software. Me dedico a
           crear y mejorar páginas web, buscando siempre brindar soluciones
@@ -115,7 +79,6 @@ export function ThreeDMarqueeDemoSecond() {
         </div>
       </BoxReveal>
 
-      <ThreeDMarquee className="absolute inset-0 h-full w-full" images={images} />
     </div>
   );
 }

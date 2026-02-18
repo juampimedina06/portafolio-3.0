@@ -2,25 +2,6 @@
 
 import { MagicCard } from '../magicui/magic-card';
 import { useTheme } from 'next-themes';
-import AnimacionLenguage from '../propios/AnimacionLenguage';
-import HtmlLogo from '../lenguajes/Html';
-import Talwind from '../lenguajes/Talwind';
-import TypescriptLogo from '../lenguajes/Typescript';
-import ReactLOGO from '../lenguajes/React';
-import CssLogo from '../lenguajes/Css';
-import Csharp from '../lenguajes/Csharp';
-import SqlServer from '../lenguajes/Sqlserver';
-import AngularLogo from '../lenguajes/AngularLogo';
-import Bostrap from '../lenguajes/Bostrap';
-import NodeLogo from '../lenguajes/NodeJS';
-import DokerLogo from '../lenguajes/DockerLogo';
-import GitLogo from '../lenguajes/GitLogo';
-import StyledComponent from '../lenguajes/StyledComponent';
-import MySQL from '../lenguajes/MySQL';
-import Javascript from '../lenguajes/JavaScrippt';
-import FigmaLogo from '../lenguajes/Figma';
-import JavaLogo from '../lenguajes/Java';
-import Material from '../lenguajes/Material';
 import BotonTecnologias from '../magicui/BotonTecnologias';
 import { BoxReveal } from '../magicui/box-reveal';
 
@@ -55,7 +36,7 @@ const Certficaciones = () => {
   const { theme } = useTheme();
 
   return (
-    <div className='flex w-full flex-col items-center mb-36 mt-20 '>
+    <div className='flex w-full flex-col items-center '>
       <BoxReveal boxColor="1122330">
           <h2 className="sm:text-[3rem] text-[2.5rem]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">Mis Certificaciones</h2>                
       </BoxReveal>
