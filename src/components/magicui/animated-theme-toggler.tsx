@@ -1,47 +1,39 @@
 "use client";
-
 import { Moon, SunDim } from "lucide-react";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { flushSync } from "react-dom";
+import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 
-// Esto extiende Document para que TS reconozca startViewTransition
 declare global {
   interface Document {
     startViewTransition?: (callback: () => void) => { ready: Promise<void> };
   }
 }
 
-type props = {
-  className?: string;
-};
+type Props = { className?: string };
 
-export const AnimatedThemeToggler = ({ className }: props) => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
+export const AnimatedThemeToggler = ({ className }: Props) => {
+  const { theme, setTheme } = useTheme();
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const isDark = theme === "dark";
 
   const changeTheme = async () => {
     if (!buttonRef.current) return;
+    const nextTheme = isDark ? "light" : "dark";
 
     if ("startViewTransition" in document && document.startViewTransition) {
       await document.startViewTransition(() => {
-        flushSync(() => {
-          const dark = document.documentElement.classList.toggle("dark");
-          setIsDarkMode(dark);
-        });
+        flushSync(() => setTheme(nextTheme));
       }).ready;
     } else {
-      // Fallback si el navegador no soporta startViewTransition
-      flushSync(() => {
-        const dark = document.documentElement.classList.toggle("dark");
-        setIsDarkMode(dark);
-      });
+      setTheme(nextTheme);
     }
 
-    const { top, left, width, height } = buttonRef.current.getBoundingClientRect();
+    const { top, left, width, height } =
+      buttonRef.current.getBoundingClientRect();
     const y = top + height / 2;
     const x = left + width / 2;
-
     const right = window.innerWidth - left;
     const bottom = window.innerHeight - top;
     const maxRad = Math.hypot(Math.max(left, right), Math.max(top, bottom));
@@ -57,13 +49,13 @@ export const AnimatedThemeToggler = ({ className }: props) => {
         duration: 700,
         easing: "ease-in-out",
         pseudoElement: "::view-transition-new(root)",
-      },
+      }
     );
   };
 
   return (
-    <button ref={buttonRef} onClick={changeTheme} className={cn(className)}>
-      {isDarkMode ? <SunDim /> : <Moon />}
+    <button ref={buttonRef} onClick={changeTheme} className={cn("", className)}>
+      {isDark ? <SunDim /> : <Moon />}
     </button>
   );
 };

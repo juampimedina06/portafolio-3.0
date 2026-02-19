@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
-import './InfiniteMenu.module.css';
+import './InfiniteMenu.css';
 
 const discVertShaderSource = `#version 300 es
 
@@ -958,8 +958,9 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }) {
     }
   };
 
+
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+    <div  style={{ position: 'relative', width: '100%', height: '100%' }}>
 <canvas 
   className='w-full h-full overflow-hidden relative outline-none cursor-grab active:cursor-grabbing'
   id="infinite-grid-menu-canvas" 
@@ -972,7 +973,7 @@ export default function InfiniteMenu({ items = [], scale = 1.0 }) {
           <p className={`face-description ${isMoving ? 'inactive' : 'active'}`}> {activeItem.description}</p>
 
           <div onClick={handleButtonClick} className={`action-button ${isMoving ? 'inactive' : 'active'}`}>
-            <p className="action-button-icon">&#x2197;</p>
+            <p className="action-button-icon">Ver mas...</p>
           </div>
         </>
       )}
