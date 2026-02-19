@@ -13,9 +13,10 @@ import { Observer } from "gsap/Observer";
 import Certficaciones from "@/components/layouts/Certficaciones";
 import { Contacto } from "@/components/layouts/Contacto";
 import { ThreeDMarqueeDemoSecond } from "@/components/layouts/FullScreen";
-import MisTecnologias from "@/components/layouts/MisTecnologias";
-import Proyectos from "@/components/layouts/Proyectos";
+import TecnologiasNuevas from "@/components/layouts/ProyectosNuevos";
+import TecnologiasDestacables from "@/components/layouts/TecnologiasDestacables";
 import ProyectosNuevos from "@/components/layouts/ProyectosNuevos";
+import CertificacionesNuevas from "@/components/layouts/CertificacionesNuevas";
 
 /**
  * Registramos el plugin Observer de GSAP.
@@ -209,19 +210,17 @@ export default function Home() {
 
       <section className="snap-section h-screen w-full flex items-center justify-center">
           {/*<Proyectos />*/}
-          <ProyectosNuevos />
+          <TecnologiasDestacables />
       </section>
 
       <section className="snap-section h-screen w-full flex items-center justify-center">
-        <div className="w-full sm:w-[70%]">
-          <MisTecnologias />
-        </div>
+          {/*<MisTecnologias />*/}
+           <ProyectosNuevos />
       </section>
 
       <section className="snap-section h-screen w-full flex items-center justify-center">
-        <div className="w-full sm:w-[70%]">
-          <Certficaciones />
-        </div>
+          {/* <Certficaciones /> */}
+          <CertificacionesNuevas />
       </section>
 
       <section className="snap-section h-screen w-full flex items-center justify-center">

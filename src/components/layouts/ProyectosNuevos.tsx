@@ -1,116 +1,30 @@
 import React from 'react'
-import InfiniteMenu from '../reactbits/InfiniteMenu/InfiniteMenu';
-
-const ProyectosNuevos = () => {
+import CircularGallery from '../reactbits/CircularGallery/CircularGallery'
 
 const items = [
-  {
-    image: '/assets/paginas/pagina-fifa.jpg',
-    imagen_color: '/assets/paginas/pagina-fifa-color.jpg',
-    link: 'https://www.linkedin.com/feed/update/urn:li:activity:7387553206442283008/',
-    title: 'Proyecto FIFA',
-    tipo_proyecto: 'Full Stack Web App',
-    rol: 'Desarrollador Full Stack',
-    anio: 2025,
-    destacado: true,
-    stack: ['HTML', 'CSS', 'ChartsJS', 'TypeScript', 'Angular', 'NodeJS', 'Express', 'MySQL'],
-    description: '"Html", "Css", "ChartsJS", "TypeScript", "Angular", "NodeJS", "Express", "MySQL"',
-    descripcion_principal:
-      'Aplicación web full stack orientada a la gestión y visualización avanzada de estadísticas deportivas. El frontend fue desarrollado en Angular con TypeScript, implementando arquitectura modular, separación clara de componentes y manejo estructurado de estados. Se diseñó una API REST con NodeJS y Express, asegurando endpoints organizados, validación de datos y correcta estructuración de respuestas. La base de datos MySQL fue modelada aplicando relaciones normalizadas y claves compuestas para mantener integridad referencial. Se integraron gráficos dinámicos con ChartsJS para representar métricas en tiempo real, optimizando la interpretación visual de datos. El proyecto demuestra dominio en arquitectura cliente-servidor, modelado relacional, consumo de APIs, buenas prácticas de estructuración backend y enfoque analítico en visualización de información.'
-  },
-  {
-    image: '/assets/paginas/pagina-portafolio.jpg',
-    imagen_color: '/assets/paginas/pagina-portafolio-color.jpg',
-    link: 'https://github.com/juampimedina06/portafolio-3.0',
-    title: 'Portafolio Personal',
-    tipo_proyecto: 'Frontend Avanzado',
-    rol: 'Desarrollador Frontend',
-    anio: 2025,
-    destacado: true,
-    stack: ['HTML', 'Tailwind', 'TypeScript', 'React', 'GSAP', 'NextJS', 'Aceternity', 'ReactBits'],
-    description: '"Html", "Tailwind", "TypeScript", "React", "GSAP", "NextJS", "Aceternity", "ReactBits"',
-    descripcion_principal:
-      'Sitio profesional desarrollado con NextJS y React bajo una arquitectura moderna optimizada para rendimiento, escalabilidad y SEO. Implementé TypeScript para tipado estático y mayor mantenibilidad del código. Se trabajó con componentización avanzada y reutilizable, aplicando principios de diseño limpio y separación de responsabilidades. Las animaciones fueron desarrolladas con GSAP para generar una experiencia interactiva diferenciada, cuidando la performance y evitando bloqueos en el renderizado. El diseño visual fue construido con TailwindCSS y librerías complementarias para lograr consistencia estética y adaptabilidad responsive. Este proyecto refleja dominio en desarrollo frontend moderno, optimización de experiencia de usuario, estructura profesional de código y enfoque estratégico de posicionamiento personal.'
-  },
-  {
-    image: '/assets/paginas/pagina-negocio.png',
-    imagen_color: '/assets/paginas/pagina-negocio-color.png',
-    link: 'https://peque-hongkong.vercel.app/',
-    title: 'Catalogo de productos',
-    tipo_proyecto: 'Sistema con Panel Autoadministrable',
-    rol: 'Desarrollador Full Stack',
-    anio: 2025,
-    destacado: true,
-    stack: ['HTML', 'CSS', 'TypeScript', 'React', 'Supabase'],
-    description: '"Html", "Css", "TypeScript", "React", "Supabase"',
-    descripcion_principal:
-      'Sistema web autoadministrable desarrollado para un negocio real, permitiendo la gestión completa de productos mediante autenticación segura. Implementé login con control de acceso y diferenciación entre usuarios administradores y visualizadores. El panel permite crear, editar y eliminar productos con persistencia en base de datos gestionada por Supabase. En el frontend, React maneja estados, renderizado dinámico y sincronización en tiempo real con la base de datos. Se estructuró la lógica de negocio separando claramente capa de presentación y acceso a datos. El proyecto demuestra capacidad para desarrollar soluciones comerciales funcionales, implementar CRUD completo, trabajar con backend como servicio y entregar un producto listo para producción.'
-  },
-  {
-    image: '/assets/paginas/pagina.muni.jpg',
-    imagen_color: '/assets/paginas/pagina-muni-color.jpg',
-    link: 'https://municipalidad-xi.vercel.app/',
-    title: 'Encuesta para Municipalidad',
-    tipo_proyecto: 'Sistema de Encuestas y Visualización de Datos',
-    rol: 'Desarrollador Frontend',
-    anio: 2024,
-    destacado: false,
-    stack: ['HTML', 'CSS', 'TypeScript', 'Angular', 'ChartsJS', 'Scrum'],
-    description: '"Html", "Css", "TypeScript", "Angular", "ChartsJS", "Scrum"',
-    descripcion_principal:
-      'Aplicación desarrollada en Angular orientada a la recolección estructurada de datos ciudadanos mediante encuestas digitales. Se implementó un sistema dinámico de formularios con validaciones y almacenamiento organizado de respuestas. La visualización estadística se realizó con ChartsJS, permitiendo transformar datos crudos en gráficos interpretables para la toma de decisiones institucionales. El proyecto fue gestionado bajo metodología Scrum, participando en planificación de sprints, división de tareas y seguimiento iterativo. Demuestra capacidad de desarrollo en entornos colaborativos, enfoque en soluciones públicas y habilidad para convertir información en análisis visual significativo.'
-  },
-  {
-    image: '/assets/paginas/proyecto-aluraflix.png',
-    imagen_color: '/assets/paginas/proyecto-aluraflix-color.png',
-    link: 'https://aluraflix-eight-sage.vercel.app/',
-    title: 'Clon de Netflix',
-    tipo_proyecto: 'SPA Frontend',
-    rol: 'Desarrollador Frontend',
-    anio: 2024,
-    destacado: false,
-    stack: ['HTML', 'CSS', 'StyledComponents', 'JavaScript', 'React', 'MaterialUI'],
-    description: '"Html", "Css", "StyledComponents", "JavaScript", "React", "MaterialUI"',
-    descripcion_principal:
-      'Single Page Application desarrollada en React replicando la experiencia estructural de una plataforma de streaming. Se implementó navegación dinámica, renderizado condicional y organización de contenido por categorías. El diseño fue construido con StyledComponents y MaterialUI, logrando coherencia visual y componentes reutilizables. Se trabajó el manejo eficiente del estado y la estructuración escalable del proyecto. Este desarrollo evidencia comprensión profunda del flujo de renderizado en React, diseño de interfaces complejas y construcción de experiencias de usuario interactivas.'
-  },
-  {
-    image: '/assets/paginas/mercado-week.png',
-    imagen_color: '/assets/paginas/mercado-week-color.png',
-    link: 'https://mercado-libre-week.vercel.app/',
-    title: 'Clon de Mercado Libre',
-    tipo_proyecto: 'Frontend E-commerce',
-    rol: 'Desarrollador Frontend',
-    anio: 2024,
-    destacado: false,
-    stack: ['HTML', 'CSS', 'JavaScript'],
-    description: '"Html", "Css", "JavaScript"',
-    descripcion_principal:
-      'Clon funcional de marketplace desarrollado con tecnologías base del frontend. Implementé renderizado dinámico de productos mediante manipulación del DOM y estructuración modular del código JavaScript. Se trabajó diseño responsive con CSS puro, priorizando claridad visual y experiencia de navegación. El proyecto consolidó fundamentos sólidos de maquetación, lógica de interacción y estructuración de datos en frontend sin frameworks.'
-  },
-  {
-    image: '/assets/paginas/pagina-shark.jpg',
-    imagen_color: '/assets/paginas/pagina-shark-color.jpg',
-    link: 'https://shark-ecommerce.vercel.app/',
-    title: 'E-commerce de Ropa',
-    tipo_proyecto: 'Landing Comercial',
-    rol: 'Desarrollador Frontend',
-    anio: 2024,
-    destacado: false,
-    stack: ['HTML', 'CSS', 'Bostrap'],
-    description: '"Html", "Css", "Bostrap"',
-    descripcion_principal:
-      'Sitio web comercial orientado a la exhibición de productos de indumentaria. El desarrollo se enfocó en maquetación estructurada, diseño responsive y organización clara de catálogo. Se utilizó Bootstrap para acelerar la construcción de componentes visuales manteniendo consistencia en estilos y adaptabilidad a distintos dispositivos. Proyecto centrado en experiencia visual, jerarquía de contenido y presentación profesional de productos.'
-  }
+  { image: "https://picsum.photos/seed/1/800/600", text: "Item 1" },
+  { image: "https://picsum.photos/seed/2/800/600", text: "Item 2" },
+  { image: "https://picsum.photos/seed/3/800/600", text: "Item 3" },
+  { image: "https://picsum.photos/seed/4/800/600", text: "Item 4" },
+  { image: "https://picsum.photos/seed/5/800/600", text: "Item 5" },
+  { image: "https://picsum.photos/seed/6/800/600", text: "Item 6" },
+  { image: "https://picsum.photos/seed/7/800/600", text: "Item 7" },
+  { image: "https://picsum.photos/seed/8/800/600", text: "Item 8" },
 ];
 
-
+const ProyectosNuevos = () => {
   return (
-  <div className='bg-gray-900 w-full h-screen'>
-    <InfiniteMenu items={items} scale={1} />
-  </div>
-)
-
+    <div style={{width: '100%', height: '600px', position: 'relative' }}>
+        <CircularGallery 
+         items={items}
+         bend={3} 
+         textColor="#ffffff" 
+         borderRadius={0.05} 
+         scrollEase={0.02}
+         scrollSpeed={2}
+        />
+    </div>
+  )
 }
 
 export default ProyectosNuevos

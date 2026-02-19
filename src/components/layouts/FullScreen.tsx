@@ -2,20 +2,35 @@
 
 import { BoxReveal } from "../magicui/box-reveal";
 import BotonHover from "../ui/BotonHover";
-import Waves from "@/components/reactbits/Waves/Waves"
-
+import Beams from "../reactbits/Beams/Beams"
 
 export function ThreeDMarqueeDemoSecond() {
  
   return (
-     <div className=" relative flex h-screen w-full flex-col items-center justify-center overflow-hidden border-b-2" >
-      <Waves />
-      <img
-        src="/assets/logos/fotobaris.png"
-        alt="Logo traje"
-        className="absolute top-80 left-1/2 z-10 w-1/2 -translate-x-1/2 -translate-y-1/2 
-              [mask-image:linear-gradient(to_bottom,black_80%,transparent)] [mask-repeat:no-repeat] [mask-size:100%]"
-      />
+     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden border-b-2">
+
+  {/* Fondo */}
+  <div className="absolute inset-0">
+    <Beams
+      beamWidth={3}
+      beamHeight={30}
+      beamNumber={20}
+      lightColor="#ffffff"
+      speed={2}
+      noiseIntensity={1.75}
+      scale={0.2}
+      rotation={30}
+    />
+  </div>
+
+  {/* Contenido */}
+  <img
+    src="/assets/logos/fotobaris.png"
+    alt="Logo traje"
+    className="absolute top-80 left-1/2 z-10 w-1/2 -translate-x-1/2 -translate-y-1/2 
+      [mask-image:linear-gradient(to_bottom,black_80%,transparent)]"
+  />
+
 
       <BoxReveal boxColor="#1122330">
         <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
@@ -24,15 +39,6 @@ export function ThreeDMarqueeDemoSecond() {
             Front-end
           </span>{" "}
         </h2>
-      </BoxReveal>
-
-      <BoxReveal boxColor="#1122330"> 
-        <p className=" relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base">
-          👋 ¡Hola! Soy Juan Pablo Medina, vivo en Córdoba, Argentina 🇦🇷 y
-          actualmente estoy estudiando Desarrollo de Software. Me dedico a
-          crear y mejorar páginas web, buscando siempre brindar soluciones
-          efectivas y adaptadas a las necesidades de mis clientes.
-        </p>
       </BoxReveal>
 
       <BoxReveal boxColor="#1122330">
